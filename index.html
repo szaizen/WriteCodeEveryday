@@ -71,7 +71,20 @@ $('.answer2').text(answer2);
 		</div>
 		<div class="answer">
 			<pre class="program">
+var x = 600851475143;
+var i = 2;
+soinnsuu = [];
+var answer3 = 0;
 
+while( x > 1 ) {
+	if( x % i === 0 ) {
+		soinnsuu.push(i);
+		x = x / i ;
+	} else {
+		i += 1;
+	}
+}
+$('.answer3').text(Math.max.apply(null, soinnsuu));
 			</pre>	
 			A.<span class="answer3"></span>
 		</div>

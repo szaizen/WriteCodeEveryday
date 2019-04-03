@@ -28,6 +28,7 @@ jQuery(document).ready(function(){
 	var x = 600851475143;
 	var i = 2;
 	soinnsuu = [];
+	var answer3 = 0;
 
 	while( x > 1 ) {
 		if( x % i === 0 ) {
@@ -37,8 +38,6 @@ jQuery(document).ready(function(){
 			i += 1;
 		}
 	}
-
-	console.log(soinnsuu);
-
+	$('.answer3').text(Math.max.apply(null, soinnsuu));
 
 });

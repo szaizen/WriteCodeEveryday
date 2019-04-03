@@ -17,7 +17,6 @@ jQuery(document).ready(function(){
 	while( b <= 4000000 ) {
 		if( b % 2 === 0 ) {
 			answer2 += b;
-			console.log(temp + 'は偶数です')
 		}
 		temp = a + b;
 		a = b;
@@ -29,6 +28,17 @@ jQuery(document).ready(function(){
 	var x = 600851475143;
 	var i = 2;
 	soinnsuu = [];
-	
+
+	while( x > 1 ) {
+		if( x % i === 0 ) {
+			soinnsuu.push(i);
+			x = x / i ;
+		} else {
+			i += 1;
+		}
+	}
+
+	console.log(soinnsuu);
+
 
 });

@@ -24,4 +24,11 @@ jQuery(document).ready(function(){
 		b = temp;
 	}
 	$('.answer2').text(answer2);
+
+	//problem3
+	var x = 600851475143;
+	var i = 2;
+	soinnsuu = [];
+	
+
 });

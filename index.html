@@ -90,5 +90,35 @@ $('.answer3').text(Math.max.apply(null, soinnsuu));
 		</div>
 	</div><!-- Probrem3 -->
 
+	<div class="probrem4">
+		<h3>問題4</h3>
+		<div class="probrem">
+			左右どちらから読んでも同じ値になる数を回文数という. 2桁の数の積で表される回文数のうち, 最大のものは 9009 = 91 × 99 である.<br>
+			では, 3桁の数の積で表される回文数の最大値を求めよ.
+		</div>
+		<div class="answer">
+			<pre class="program">
+kaibunsuu = [];
+var temp = 0;
+for(var i = 100; i <= 999; i++){
+	for(var j = 100; j<=999; j++) {
+		kaibun(i * j);
+	}
+}
+function kaibun(number) {
+	var reverse = toReverse(String(number));
+	if(Number(number)===Number(reverse)) {
+		kaibunsuu.push(number);
+	}
+}
+function toReverse(s) {
+  return s.split("").reverse().join("");
+}
+$('.answer4').text(Math.max.apply(null,kaibunsuu));
+			</pre>	
+			A.<span class="answer4"></span>
+		</div>
+	</div><!-- Probrem4 -->
+
 </body>
 </html>

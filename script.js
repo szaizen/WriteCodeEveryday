@@ -50,7 +50,7 @@ jQuery(document).ready(function(){
 	}
 	function kaibun(number) {
 		var reverse = toReverse(String(number));
-		if( number === Number(reverse)) {
+		if(number === Number(reverse)) {
 			kaibunsuu.push(number);
 		}
 	}

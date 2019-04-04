@@ -40,4 +40,23 @@ jQuery(document).ready(function(){
 	}
 	$('.answer3').text(Math.max.apply(null, soinnsuu));
 
+	//problem4
+	kaibunsuu = [];
+	var temp = 0;
+	for(var i = 100; i <= 999; i++){
+		for(var j = 100; j<=999; j++) {
+			kaibun(i * j);
+		}
+	}
+	function kaibun(number) {
+		var reverse = toReverse(String(number));
+		if(Number(number)===Number(reverse)) {
+			kaibunsuu.push(number);
+		}
+	}
+	function toReverse(s) {
+	  return s.split("").reverse().join("");
+	}
+	$('.answer4').text(Math.max.apply(null,kaibunsuu));
+	
 });

@@ -58,5 +58,8 @@ jQuery(document).ready(function(){
 	  return s.split("").reverse().join("");
 	}
 	$('.answer4').text(Math.max.apply(null,kaibunsuu));
+
+	//problem5
+
 	
 });

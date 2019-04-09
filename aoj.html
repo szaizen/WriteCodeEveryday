@@ -76,25 +76,42 @@ function problem1() {
 </pre>
 <pre class="answer">
 function problem2() {
-
 	/* randomな10の数を生成 */
 	var mountainHeight = [];
 	for( var i = 0; i < 10; i++ ) {
-		mountainHeight.push(Math.ceil( Math.random()*10000 ));
+		mountainHeight.push(Math.ceil(Math.random() * 10000));
 	};
-
 	/* 降順で並び替え */
 	mountainHeight.sort(function(a,b){
 	        if( a > b ) return -1;
 	        if( a < b ) return 1;
 	        return 0;
 	});
-
 	$('.answer2').append("&lt;div&gt;" + mountainHeight[0] + "&lt;/div&gt;").append("&lt;div&gt;" + mountainHeight[1] + "&lt;/div&gt;").append("&lt;div&gt;" + mountainHeight[2] + "&lt;/div&gt;");
-
 };
 </pre>
 <div class="answer2 a"></div>
 <!-- 問題2ここまで -->
+
+<!-- 問題3 -->
+<h2>問題3</h2>
+<pre class="problem">
+与えられた２つの整数 a と b の和の桁数を出力するプログラムを作成して下さい。
+0 ≤ a, b ≤ 1,000,000
+データセットの数 ≤ 200
+</pre>
+<pre class="answer">
+function problem3() {
+	var total = Math.ceil(Math.random() * 100);
+	for(var i = 0; i < total; i++) {
+		var randomA = Math.ceil(Math.random() * 1000000);
+		var randomB = Math.ceil(Math.random() * 1000000);
+		$('.answer3').append("&lt;div&gt;" + (randomA + randomB) + "：" + String(randomA + randomB).length + "桁&lt;/div&gt;");
+	}
+};
+</pre>
+<div class="answer3 a"></div>
+<!-- 問題3ここまで -->
+
 </body>
 </html>

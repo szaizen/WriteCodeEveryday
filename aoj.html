@@ -113,5 +113,39 @@ function problem3() {
 <div class="answer3 a"></div>
 <!-- 問題3ここまで -->
 
+<!-- 問題4 -->
+<h2>問題4</h2>
+<pre class="problem">
+直角三角形
+３つの正の整数を入力し、それぞれの長さを３辺とする三角形が直角三角形である場合には YES を、
+違う場合には NO と出力するプログラムを作成して下さい。
+1 ≤ 1辺の長さ ≤ 1,000
+N ≤ 1,000
+</pre>
+<pre class="answer">
+function problem4() {
+	var sankaku = [];
+	var answerBoolean = "false";
+
+	for(var i = 0; i < 3; i++) {
+		sankaku.push(Math.ceil(Math.random() * 1000));
+	}
+
+	for(var j = 0; j < 3; j++) {
+		sankaku.sort(function(a,b){
+	        if( a > b ) return -1;
+	        if( a < b ) return 1;
+	        return 0;
+	    });
+	    if((sankaku[2] * sankaku[2]) + (sankaku[1] * sankaku[1]) === (sankaku[0] * sankaku[0])) {
+			answerBoolean = "true";
+		};
+	$('.answer4').append("&lt;div&gt;" + answerBoolean + "&lt;/div&gt;");
+	}	
+};
+</pre>
+<div class="answer4 a"></div>
+<!-- 問題4ここまで -->
+
 </body>
 </html>

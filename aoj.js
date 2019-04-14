@@ -4,6 +4,7 @@ jQuery(document).ready(function(){
 	problem2();
 	problem3();
 	problem4();
+	problem5();
 
 	function problem1() {
 		for( var i = 1; i <= 9; i++ ) {
@@ -53,6 +54,10 @@ jQuery(document).ready(function(){
 			};
 		$('.answer4').append("<div>" + answerBoolean + "</div>");
 		}	
+	};
+	function problem5() {
+		//a, b, c, d, e, f
+
 	};
 
 
